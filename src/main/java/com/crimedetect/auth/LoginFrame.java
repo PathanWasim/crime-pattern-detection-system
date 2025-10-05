@@ -137,10 +137,12 @@ public class LoginFrame extends JFrame {
                     new DashboardFrame().setVisible(true); // Open dashboard
                 });
             } else {
-                JOptionPane.showMessageDialog(this, "Invalid Password!", "Error", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Invalid credentials!", "Login Failed", JOptionPane.ERROR_MESSAGE);
+                passwordField.setText(""); // Clear password field
             }
         } else {
-            JOptionPane.showMessageDialog(this, "User Not Found!", "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Invalid credentials!", "Login Failed", JOptionPane.ERROR_MESSAGE);
+            passwordField.setText(""); // Clear password field
         }
     } catch (SQLException ex) {
         ex.printStackTrace();

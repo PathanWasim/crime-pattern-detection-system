@@ -41,7 +41,7 @@ cd crime-pattern-detection-system
 mysql -u root -p < database_schema.sql
 ```
 
-3. Update database credentials in `src/main/resources/application.properties`
+3. Update database credentials in `DatabaseConnection.java` if needed
 
 4. Build and run
 ```bash
@@ -53,6 +53,9 @@ Or use the launcher script:
 ```bash
 ./launch.bat
 ```
+
+### Quick Start
+Run `setup.bat` for automated setup, then `launch.bat` to start the application.
 
 ## Usage
 
